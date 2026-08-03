@@ -1,0 +1,47 @@
+{
+  "period_type": "weekly",
+  "period_id": "2026-W32",
+  "date_from": "2026-08-03",
+  "date_to": "2026-08-09",
+  "reporter": "father|mother|both",
+  "metrics": {
+    "father_connection": {"score": null, "evidence": ""},
+    "mother_connection": {"score": null, "evidence": ""},
+    "father_special_time": {"score": null, "evidence": ""},
+    "mother_special_time": {"score": null, "evidence": ""},
+    "parent_review": {"score": null, "evidence": ""},
+    "repair_after_conflict": {"score": null, "evidence": ""},
+    "listening_without_fixing": {"score": null, "evidence": ""},
+    "child_voice": {"score": null, "evidence": ""},
+    "low_pressure": {"score": null, "evidence": ""},
+    "warmth_predictability": {"score": null, "evidence": ""},
+    "sleep_routine": {"score": null, "evidence": ""},
+    "play_movement": {"score": null, "evidence": ""},
+    "social_opportunity": {"score": null, "evidence": ""},
+    "school_coordination": {"score": null, "evidence": ""}
+  },
+  "child_experience_signals": {
+    "felt_safe_at_home": "UNKNOWN",
+    "asked_for_help": "UNKNOWN",
+    "school_distress": "UNKNOWN",
+    "sleep_or_stress_symptoms": "UNKNOWN",
+    "peer_connection": "UNKNOWN",
+    "avoidance_interference": "UNKNOWN",
+    "bullying_or_harm": "UNKNOWN",
+    "major_mood_or_behavior_change": "UNKNOWN"
+  },
+  "observations": {
+    "one_positive_moment": "",
+    "one_difficult_moment": "",
+    "what_helped": "",
+    "what_increased_pressure": "",
+    "mahoor_voice": "",
+    "parent_capacity": ""
+  },
+  "privacy_check": {
+    "contains_child_audio": false,
+    "contains_other_child_names": false,
+    "contains_school_identifiers": false,
+    "contains_medical_documents": false
+  }
+}
