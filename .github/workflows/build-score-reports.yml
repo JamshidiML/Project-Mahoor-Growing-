@@ -1,0 +1,50 @@
+name: Build score reports
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "07-data/**/*.json"
+      - "07-scoring/**"
+      - "tools/score_cycle.py"
+
+permissions:
+  contents: write
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate and build reports
+        shell: bash
+        run: |
+          set -euo pipefail
+          mapfile -t files < <(find 07-data/weekly -type f -name '*.json' 2>/dev/null | sort)
+          if [ "${#files[@]}" -eq 0 ]; then
+            echo "No weekly JSON files found."
+            exit 0
+          fi
+          for file in "${files[@]}"; do
+            python tools/score_cycle.py "$file"
+          done
+
+      - name: Commit generated reports
+        shell: bash
+        run: |
+          if git diff --quiet -- 08-reports; then
+            echo "No report changes."
+            exit 0
+          fi
+          git config user.name "mahoor-report-bot"
+          git config user.email "mahoor-report-bot@users.noreply.github.com"
+          git add 08-reports
+          git commit -m "chore: update family operating reports"
+          git push
