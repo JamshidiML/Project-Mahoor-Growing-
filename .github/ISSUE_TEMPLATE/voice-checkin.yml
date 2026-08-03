@@ -1,63 +1,63 @@
 name: Voice Check-in
- description: ثبت متن استخراج‌شده از گزارش صوتی والد، بدون فایل صوتی خام
- title: "[VOICE] YYYY-MM-DD — father/mother"
- body:
-   - type: markdown
-     attributes:
-       value: |
-         فایل صوتی خام، نام مدرسه، نام کودکان دیگر، اطلاعات پزشکی و مکالمه خصوصی را وارد نکنید. فقط متن بی‌نام یا خلاصه را ثبت کنید.
-   - type: dropdown
-     id: reporter
-     attributes:
-       label: گزارش‌دهنده
-       options:
-         - پدر
-         - مادر
-         - مشترک
-     validations:
-       required: true
-   - type: input
-     id: date
-     attributes:
-       label: تاریخ رویداد
-       placeholder: YYYY-MM-DD
-     validations:
-       required: true
-   - type: textarea
-     id: transcript
-     attributes:
-       label: متن گزارش صوتی یا خلاصه
-       description: زمینه، مشاهده، پاسخ والد، نتیجه، عوامل کمک‌کننده/فشارزا و اقدام پیشنهادی را توضیح دهید.
-       placeholder: |
-         زمینه:
-         مشاهده دقیق:
-         پاسخ والد:
-         نتیجه:
-         عامل کمک‌کننده یا فشارزا:
-         پیشنهاد دفعه بعد:
-     validations:
-       required: true
-   - type: checkboxes
-     id: privacy
-     attributes:
-       label: کنترل حریم خصوصی
-       options:
-         - label: صدای خام یا اطلاعات شناسایی اشخاص ثالث در این Issue قرار نگرفته است.
-           required: true
-         - label: این گزارش پس از رویداد تهیه شده و شامل ضبط مخفی کودک نیست.
-           required: true
-   - type: dropdown
-     id: active_skill
-     attributes:
-       label: مهارت فعال
-       options:
-         - نامشخص / سیستم تعیین کند
-         - بیان احساس و نیاز
-         - درخواست کمک
-         - ورود به بازی
-         - مرزبندی و نه گفتن
-         - تحمل نه شنیدن
-         - استقلال روزمره
-         - سایر
-     validations:
-       required: true
+description: ثبت متن استخراج‌شده از گزارش صوتی والد، بدون فایل صوتی خام
+title: "[VOICE] YYYY-MM-DD — father/mother"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        فایل صوتی خام، نام مدرسه، نام کودکان دیگر، اطلاعات پزشکی و مکالمه خصوصی را وارد نکنید. فقط متن بی‌نام یا خلاصه را ثبت کنید.
+  - type: dropdown
+    id: reporter
+    attributes:
+      label: گزارش‌دهنده
+      options:
+        - پدر
+        - مادر
+        - مشترک
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: تاریخ رویداد
+      placeholder: YYYY-MM-DD
+    validations:
+      required: true
+  - type: textarea
+    id: transcript
+    attributes:
+      label: متن گزارش صوتی یا خلاصه
+      description: زمینه، مشاهده، پاسخ والد، نتیجه، عوامل کمک‌کننده/فشارزا و اقدام پیشنهادی را توضیح دهید.
+      placeholder: |
+        زمینه:
+        مشاهده دقیق:
+        پاسخ والد:
+        نتیجه:
+        عامل کمک‌کننده یا فشارزا:
+        پیشنهاد دفعه بعد:
+    validations:
+      required: true
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: کنترل حریم خصوصی
+      options:
+        - label: صدای خام یا اطلاعات شناسایی اشخاص ثالث در این Issue قرار نگرفته است.
+          required: true
+        - label: این گزارش پس از رویداد تهیه شده و شامل ضبط مخفی کودک نیست.
+          required: true
+  - type: dropdown
+    id: active_skill
+    attributes:
+      label: مهارت فعال
+      options:
+        - نامشخص / سیستم تعیین کند
+        - بیان احساس و نیاز
+        - درخواست کمک
+        - ورود به بازی
+        - مرزبندی و نه گفتن
+        - تحمل نه شنیدن
+        - استقلال روزمره
+        - سایر
+    validations:
+      required: true
