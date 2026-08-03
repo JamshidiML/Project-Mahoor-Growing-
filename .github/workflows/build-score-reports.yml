@@ -7,6 +7,7 @@ on:
       - "07-data/**/*.json"
       - "07-scoring/**"
       - "tools/score_cycle.py"
+      - "tools/aggregate_period.py"
 
 permissions:
   contents: write
@@ -23,7 +24,7 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Validate and build reports
+      - name: Validate and build weekly reports
         shell: bash
         run: |
           set -euo pipefail
@@ -35,6 +36,7 @@ jobs:
           for file in "${files[@]}"; do
             python tools/score_cycle.py "$file"
           done
+          python tools/aggregate_period.py
 
       - name: Commit generated reports
         shell: bash
