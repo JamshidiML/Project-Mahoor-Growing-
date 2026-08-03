@@ -1,0 +1,27 @@
+# Never commit raw child/family data
+private-local/
+audio/
+recordings/
+transcripts/raw/
+medical/
+school-private/
+photos/
+videos/
+
+# Audio/video formats
+*.m4a
+*.mp3
+*.wav
+*.aac
+*.flac
+*.ogg
+*.webm
+*.mp4
+*.mov
+
+# Secrets and local environment
+.env
+.env.*
+.DS_Store
+__pycache__/
+*.pyc
